@@ -24,7 +24,6 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
-    scrollbar-width: inherit;
 }
 
 body {
@@ -216,12 +215,6 @@ header {
     height: 65%;
     display: block;
     margin-inline: auto;
-}
-
-.offers .item picture img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
 }
 
 .offers .item picture img {
