@@ -134,6 +134,7 @@ header {
     background: var(--grey-2);
     border: 1px solid var(--grey-4);
     border-radius: 16px;
+    overflow: hidden;
 }
 
 .offers .item:before {
@@ -238,6 +239,44 @@ header {
 }
 
 /* Section - Games */
+.games .item {
+    background: var(--grey-2);
+    border: 1px solid var(--grey-4);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.games .item:before {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.games .item__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 2;
+}
+
+.games .item picture {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin-inline: auto;
+}
+
+.games .item picture img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
 /* Section - Providers */
 /* Section - Benefits */
 /* Section - Testimonials */
