@@ -1,53 +1,42 @@
-document.getElementById('myButton').addEventListener('click', function() {
+document.getElementById('myButton').addEventListener('click', function () {
     alert('Button clicked!');
 });
 
 const offersSwiper = new Swiper('.offers__swiper', {
-    // Optional parameters
-    loop: true,
+    loop: false,
     slidesPerView: 4,
     slidesPerGroup: 1,
-    slidesPerColumn: 1,
     spaceBetween: 32,
-
-    // If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
-    },
-
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-
-    // And if we need scrollbar
-    scrollbar: {
-        el: '.swiper-scrollbar',
-    },
 });
 
 const gamesSwiper = new Swiper('.games__swiper', {
-    // Optional parameters
-    loop: true,
+    loop: false,
     slidesPerView: 6,
-    slidesPerGroup: 1,
-    slidesPerColumn: 2,
+    slidesPerGroup: 2,
     spaceBetween: 7,
-
-    // If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
+    grid: {
+        rows: 2,
+        fill: 'row'
     },
+});
 
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
+const providersSwiper = new Swiper('.providers__swiper', {
+    loop: false,
+    slidesPerView: 5,
+    slidesPerGroup: 1,
+    spaceBetween: 26,
+});
 
-    // And if we need scrollbar
-    scrollbar: {
-        el: '.swiper-scrollbar',
-    },
+const benefitsSwiper = new Swiper('.benefits__swiper', {
+    loop: false,
+    slidesPerView: 3,
+    slidesPerGroup: 1,
+    spaceBetween: 40,
+});
+
+const testimonialsSwiper = new Swiper('.testimonials__swiper', {
+    loop: false,
+    slidesPerView: 4,
+    slidesPerGroup: 1,
+    spaceBetween: 24,
 });
