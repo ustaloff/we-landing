@@ -115,7 +115,8 @@ main .container {
 }
 
 button.btn {
-    padding: 12px 33px;
+    height: 50px;
+    padding: 10px 33px;
     background: var(--grey-3);
     border-radius: var(--border-radius-md);
     font-weight: 700;
@@ -658,5 +659,96 @@ a.seo-text__expand span {
 
 /* Footer */
 footer {
-    background: var(--grey-3);
+    background: var(--grey-2);
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr auto;
+    grid-template-areas:
+        "logo info info lang"
+        "menu menu help help"
+        "menu menu subscribe subscribe"
+        "copyright copyright copyright copyright";
+    gap: 10px 10px;
+    padding-block: 20px 20px;
+}
+
+.footer__logo {
+    grid-area: logo;
+}
+
+.footer__info {
+    grid-area: info;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer__info p {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    color: #ebebeb;
+}
+
+.footer__lang {
+    grid-area: lang;
+}
+
+.footer__menu {
+    grid-area: menu;
+}
+
+.footer__menu ul {
+    list-style: none;
+}
+
+.footer__menu ul li a {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--text-color-2);
+}
+
+.footer__menu ul li:first-child a {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    color: #ebebeb;
+}
+
+.footer__help {
+    grid-area: help;
+}
+
+.footer__help h3 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    color: #ebebeb;
+}
+
+.footer__help p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 179%;
+    color: var(--text-color-2);
+}
+
+.footer__subscribe {
+    grid-area: subscribe;
+}
+
+.footer__copyright {
+    grid-area: copyright;
+}
+
+.footer__copyright p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: justify;
+    color: rgba(163, 157, 175, 0.64);
 }

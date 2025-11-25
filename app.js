@@ -1,7 +1,3 @@
-document.getElementById('myButton').addEventListener('click', function () {
-    alert('Button clicked!');
-});
-
 const offersSwiper = new Swiper('.offers__swiper', {
     loop: false,
     slidesPerView: 4,
