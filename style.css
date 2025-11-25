@@ -741,6 +741,31 @@ footer {
     grid-area: subscribe;
 }
 
+.footer__subscribe label[for=email] {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 179%;
+    color: #ebebeb;
+}
+
+.footer__subscribe input[type=email] {
+    height: 50px;
+    background: var(--grey-3);
+    border: 1px solid var(--grey-3);
+    border-radius: var(--border-radius-md);
+}
+
+.footer__subscribe input[type=checkbox] {
+
+}
+
+.footer__subscribe label[for=agreed] {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    color: var(--text-color-2);
+}
+
 .footer__copyright {
     grid-area: copyright;
 }
