@@ -664,7 +664,7 @@ footer {
 
 .footer {
     display: grid;
-    grid-template-columns: auto 1fr 1fr auto;
+    grid-template-columns: 200px 1fr 1fr 200px;
     grid-template-areas:
         "logo info info lang"
         "menu menu help help"
