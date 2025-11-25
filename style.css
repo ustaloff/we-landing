@@ -592,6 +592,7 @@ section > .heading p {
 .seo-text__overflow.hidden {
     max-height: 325px;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .seo-text__overflow:not(.hidden) + .seo-text__expand span {
@@ -600,17 +601,19 @@ section > .heading p {
 
 .seo-text__overflow:before {
     content: "";
+    height: 100%;
+    /*max-height: 325px;*/
     background: linear-gradient(180deg, rgba(0, 14, 20, 0), var(--grey-1));
     position: absolute;
-    height: 100%;
     left: 0;
     right: 0;
     bottom: 0;
     pointer-events: none;
+    transition: opacity .3s .1s ease;
 }
 
 .seo-text__overflow:not(.hidden):before {
-    background: transparent;
+    opacity: 0;
 }
 
 .seo-text h3 {
