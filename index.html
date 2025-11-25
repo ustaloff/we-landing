@@ -554,7 +554,17 @@
         </div>
 
         <div class="footer__lang">
-            lang
+            <div class="lang-selector">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93s3.05-7.44 7-7.93v15.86zm2-15.86c3.95.49 7 3.85 7 7.93s-3.05 7.44-7 7.93V4.07z"
+                          fill="white"/>
+                </svg>
+                <span>English</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.94 5.72656L8 8.78656L11.06 5.72656L12 6.66656L8 10.6666L4 6.66656L4.94 5.72656Z"
+                          fill="white"/>
+                </svg>
+            </div>
         </div>
 
         <div class="footer__menu">
@@ -594,20 +604,32 @@
 
         <div class="footer__help">
             <h3>Need Help?</h3>
-            <p>We’re here to make your <strong>WinEra experience smooth, fun, and safe</strong>. If you have questions about your account, Coins, gameplay, promotions, or technical issues, our support team is always ready to assist.</p>
-            <p>Our team typically responds within 24 hours. Your satisfaction is our priority, don’t hesitate to reach out!</p>
-            <p>No purchase necessary and SC Game Rules apply. Click here for instructions on alternative method of entry.</p>
+            <p>We’re here to make your <strong>WinEra experience smooth, fun, and safe</strong>. If you have questions
+                about your account, Coins, gameplay, promotions, or technical issues, our support team is always ready
+                to assist.</p>
+            <p>Our team typically responds within 24 hours. Your satisfaction is our priority, don’t hesitate to reach
+                out!</p>
+            <p>No purchase necessary and SC Game Rules apply. Click here for instructions on alternative method of
+                entry.</p>
         </div>
 
         <div class="footer__subscribe">
             <label for="email">Subscription to Newsletter</label>
-            <div class="input-group">
+            <div class="form-group">
                 <input type="email" id="email" name="email" required/>
                 <button class="btn btn-primary">Subscribe</button>
             </div>
-            <div class="input-group">
+
+            <div class="custom-checkbox">
                 <input type="checkbox" id="agreed" name="agree"/>
-                <label for="agreed">I am happy to receive newsletters</label>
+                <label for="agreed">
+                    <span class="checkbox-visual">
+                        <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 4.5L4.5 8L11 1" stroke="white" stroke-width="2"/>
+                        </svg>
+                    </span>
+                    <span>I am happy to receive newsletters</span>
+                </label>
             </div>
         </div>
 

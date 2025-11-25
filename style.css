@@ -638,8 +638,6 @@ footer {
         "menu menu help help"
         "menu menu subscribe subscribe"
         "copyright copyright copyright copyright";
-    gap: 10px 10px;
-    padding-block: 20px 20px;
 }
 
 .footer__logo {
@@ -709,6 +707,11 @@ footer {
     grid-area: subscribe;
 }
 
+.footer__subscribe .form-group {
+    display: flex;
+    gap: 10px;
+}
+
 .footer__subscribe label[for=email] {
     font-weight: 400;
     font-size: 16px;
@@ -717,10 +720,14 @@ footer {
 }
 
 .footer__subscribe input[type=email] {
+    flex: 1;
     height: 50px;
+    padding: 10px;
     background: var(--grey-3);
+    color: var(--text-color-4);
     border: 1px solid var(--grey-3);
     border-radius: var(--border-radius-md);
+    outline: none;
 }
 
 .footer__subscribe input[type=checkbox] {
@@ -744,4 +751,89 @@ footer {
     line-height: 150%;
     text-align: justify;
     color: rgba(163, 157, 175, 0.64);
+}
+
+/* Footer Grid Borders */
+.footer {
+    --footer-border-color: var(--grey-4);
+}
+
+.footer > * {
+    padding-block: 20px;
+}
+
+.footer__menu,
+.footer__help,
+.footer__subscribe,
+.footer__copyright {
+    border-top: 1px solid var(--footer-border-color);
+}
+
+.footer__help,
+.footer__subscribe {
+    border-inline-start: 1px solid var(--footer-border-color);
+    padding-inline-start: 20px;
+}
+
+/* Language Selector */
+.lang-selector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: var(--border-radius-md);
+    background-color: var(--grey-3);
+    border: 1px solid var(--grey-4);
+    width: fit-content;
+}
+
+.lang-selector span {
+    font-weight: 500;
+}
+
+/* Custom Checkbox */
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.custom-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.custom-checkbox label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--text-color-2);
+}
+
+.custom-checkbox .checkbox-visual {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--grey-3);
+    border: 1px solid var(--grey-4);
+    border-radius: 4px;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-checkbox .checkbox-visual svg {
+    display: none;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + label .checkbox-visual {
+    background-color: var(--accent);
+    border-color: var(--accent);
+}
+
+.custom-checkbox input[type="checkbox"]:checked + label .checkbox-visual svg {
+    display: block;
 }
