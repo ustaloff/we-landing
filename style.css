@@ -16,6 +16,7 @@
     --text-color: #ebf5fe;
     --text-color-2: #b4b8cc;
     --text-color-3: #f3feff;
+    --text-color-4: var(--text-color-4);
 }
 
 html {
@@ -41,17 +42,14 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background: var(--grey-1);
+    color: var(--text-color);
 }
 
 .container {
-    /*--container-width: 1530px;
-    --container-padding-x: 15px;*/
-
     width: 100%;
     max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
     padding-inline: var(--container-padding-x);
     margin-inline: auto;
-    container: container / inline-size;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -114,7 +112,10 @@ main .container {
     gap: 60px;
 }
 
-button.btn {
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     height: 50px;
     padding: 10px 33px;
     background: var(--grey-3);
@@ -126,25 +127,26 @@ button.btn {
     color: var(--white-0);
     cursor: pointer;
     border: 0;
+    text-decoration: none;
 }
 
-button.btn:hover {
+.btn:hover {
     background: var(--grey-2);
 }
 
-button.btn.btn-primary {
+.btn.btn-primary {
     background: linear-gradient(7deg, #2450bf 0%, #5777e0 100%);
 }
 
-button.btn.btn-primary:hover {
+.btn.btn-primary:hover {
      background: linear-gradient(0deg, rgba(24, 38, 44, 0.2), rgba(24, 38, 44, 0.2)), linear-gradient(7deg, #2450bf 0%, #5777e0 100%);
  }
 
-button.btn.btn-secondary {
+.btn.btn-secondary {
     background: linear-gradient(7deg, #ff1732 0%, #ff545b 100%);
 }
 
-button.btn.btn-secondary:hover {
+.btn.btn-secondary:hover {
     background: linear-gradient(7deg, rgba(24, 38, 44, 0.2), rgba(24, 38, 44, 0.2)), linear-gradient(7deg, #ff1732 0%, #ff545b 100%);
 }
 
@@ -204,12 +206,8 @@ section > .heading p {
     border: 1px solid var(--grey-4);
     border-radius: var(--border-radius-lg);
     overflow: hidden;
-}
-
-.offers .item:before {
-    content: "";
-    display: block;
-    padding-bottom: 116%;
+    position: relative;
+    aspect-ratio: 1 / 1.16;
 }
 
 .offers .item:after {
@@ -289,7 +287,7 @@ section > .heading p {
 
 .offers .item picture img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: contain;
 }
 
@@ -306,12 +304,8 @@ section > .heading p {
     background: var(--grey-2);
     border-radius: var(--border-radius-lg);
     overflow: hidden;
-}
-
-.games .item:before {
-    content: "";
-    display: block;
-    padding-bottom: 100%;
+    position: relative;
+    aspect-ratio: 1 / 1;
 }
 
 .games .item__content {
@@ -328,15 +322,12 @@ section > .heading p {
     width: 100%;
     height: 100%;
     display: block;
-    /*margin-inline: auto;*/
 }
 
 .games .item picture img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
-    border-radius: var(--border-radius-lg);
-    overflow: hidden;
 }
 
 /* Section - Providers */
@@ -344,12 +335,8 @@ section > .heading p {
     background: var(--grey-2);
     border-radius: var(--border-radius-lg);
     overflow: hidden;
-}
-
-.providers .item:before {
-    content: "";
-    display: block;
-    padding-bottom: 58%;
+    position: relative;
+    aspect-ratio: 1 / 0.58;
 }
 
 .providers .item__content {
@@ -405,15 +392,8 @@ section > .heading p {
 
 /* Section - Benefits */
 .benefits .item {
-    /*background: var(--grey-2);*/
-    /*border-radius: 16px;
-    overflow: hidden;*/
-}
-
-.benefits .item:before {
-    content: "";
-    display: block;
-    padding-bottom: 68%;
+    position: relative;
+    aspect-ratio: 1 / 0.68;
 }
 
 .benefits .item:after {
@@ -442,7 +422,6 @@ section > .heading p {
 }
 
 .benefits .item__content {
-    /*background: var(--grey-2);*/
     position: absolute;
     top: 0;
     left: 0;
@@ -495,12 +474,8 @@ section > .heading p {
     background: var(--grey-2);
     border-radius: var(--border-radius-lg);
     overflow: hidden;
-}
-
-.testimonials .item:before {
-    content: "";
-    display: block;
-    padding-bottom: 71.5%;
+    position: relative;
+    aspect-ratio: 1 / 0.715;
 }
 
 .testimonials .item__content {
@@ -589,35 +564,26 @@ section > .heading p {
 .seo-text__overflow {
     max-height: 10000px;
     text-align: justify;
-    transition: max-height .3s ease;
+    transition: max-height .5s ease-in-out;
     position: relative;
+    overflow: hidden;
 }
 
 .seo-text__overflow.hidden {
     max-height: 325px;
-    overflow: hidden;
-    cursor: pointer;
 }
 
-.seo-text__overflow:not(.hidden) + .seo-text__expand span {
-    transform: rotate(180deg);
-}
-
-.seo-text__overflow:before {
+.seo-text__overflow.hidden::before {
     content: "";
     height: 100%;
-    /*max-height: 325px;*/
-    background: linear-gradient(180deg, rgba(0, 14, 20, 0), var(--grey-1));
+    background: linear-gradient(180deg, rgba(16, 21, 30, 0) 0%, var(--grey-1) 100%);
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
     pointer-events: none;
     transition: opacity .3s .1s ease;
-}
-
-.seo-text__overflow:not(.hidden):before {
-    opacity: 0;
+    opacity: 1;
 }
 
 .seo-text h3 {
@@ -636,19 +602,21 @@ section > .heading p {
     margin-bottom: 15px;
 }
 
-.seo-text a {
+.seo-text .seo-text__expand {
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
     color: var(--text-color-2);
-}
-
-a.seo-text__expand {
+    background: none;
+    border: none;
+    cursor: pointer;
     display: flex;
     align-items: center;
+    padding: 0;
+    margin-top: 10px;
 }
 
-a.seo-text__expand span {
+.seo-text__expand span {
     width: 23px;
     height: 23px;
     display: flex;
@@ -690,7 +658,7 @@ footer {
     font-weight: 700;
     font-size: 20px;
     line-height: 150%;
-    color: #ebebeb;
+    color: var(--text-color-4);
 }
 
 .footer__lang {
@@ -712,11 +680,11 @@ footer {
     color: var(--text-color-2);
 }
 
-.footer__menu ul li:first-child a {
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 150%;
-    color: #ebebeb;
+.footer__menu-title a {
+    font-weight: 700 !important;
+    font-size: 18px !important;
+    line-height: 150% !important;
+    color: var(--text-color-4) !important;
 }
 
 .footer__help {
@@ -727,7 +695,7 @@ footer {
     font-weight: 700;
     font-size: 18px;
     line-height: 150%;
-    color: #ebebeb;
+    color: var(--text-color-4);
 }
 
 .footer__help p {
@@ -745,7 +713,7 @@ footer {
     font-weight: 400;
     font-size: 16px;
     line-height: 179%;
-    color: #ebebeb;
+    color: var(--text-color-4);
 }
 
 .footer__subscribe input[type=email] {
