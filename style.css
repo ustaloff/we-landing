@@ -1,11 +1,14 @@
-/* Base */
+/*
+* =================================================================================================
+*   Base
+* =================================================================================================
+*/
 :root {
     --header-height: 77px;
     --container-width: 1530px;
     --container-padding-x: 15px;
     --border-radius-lg: 16px;
     --border-radius-md: 12px;
-
 
     --accent: #4b91f3;
     --grey-4: #394760;
@@ -16,7 +19,7 @@
     --text-color: #ebf5fe;
     --text-color-2: #b4b8cc;
     --text-color-3: #f3feff;
-    --text-color-4: var(--text-color-4);
+    --text-color-4: #ebebeb;
 }
 
 html {
@@ -94,7 +97,11 @@ img {
     color: var(--white-0);
 }
 
-/* Main */
+/*
+* =================================================================================================
+*   Main
+* =================================================================================================
+*/
 body {
     display: flex;
     flex-direction: column;
@@ -150,7 +157,11 @@ main .container {
     background: linear-gradient(7deg, rgba(24, 38, 44, 0.2), rgba(24, 38, 44, 0.2)), linear-gradient(7deg, #ff1732 0%, #ff545b 100%);
 }
 
-/* Header */
+/*
+* =================================================================================================
+*   Header
+* =================================================================================================
+*/
 header {
     position: fixed;
     top: 0;
@@ -173,7 +184,11 @@ header {
     gap: 10px;
 }
 
-/* Section - Headings */
+/*
+* =================================================================================================
+*   Section - Headings
+* =================================================================================================
+*/
 section > .heading {
     margin-bottom: 24px;
 }
@@ -199,8 +214,16 @@ section > .heading p {
     color: var(--text-color-2);
 }
 
-/* Section - Hero */
-/* Section - Offers */
+/*
+* =================================================================================================
+*   Section - Hero
+* =================================================================================================
+*/
+/*
+* =================================================================================================
+*   Section - Offers
+* =================================================================================================
+*/
 .offers .item {
     background: var(--grey-2);
     border: 1px solid var(--grey-4);
@@ -299,7 +322,11 @@ section > .heading p {
     color: var(--text-color-3);
 }
 
-/* Section - Games */
+/*
+* =================================================================================================
+*   Section - Games
+* =================================================================================================
+*/
 .games .item {
     background: var(--grey-2);
     border-radius: var(--border-radius-lg);
@@ -330,7 +357,11 @@ section > .heading p {
     object-fit: cover;
 }
 
-/* Section - Providers */
+/*
+* =================================================================================================
+*   Section - Providers
+* =================================================================================================
+*/
 .providers .item {
     background: var(--grey-2);
     border-radius: var(--border-radius-lg);
@@ -390,7 +421,11 @@ section > .heading p {
     color: var(--white-0);
 }
 
-/* Section - Benefits */
+/*
+* =================================================================================================
+*   Section - Benefits
+* =================================================================================================
+*/
 .benefits .item {
     position: relative;
     aspect-ratio: 1 / 0.68;
@@ -469,7 +504,11 @@ section > .heading p {
     color: var(--text-color-3);
 }
 
-/* Section - Testimonials */
+/*
+* =================================================================================================
+*   Section - Testimonials
+* =================================================================================================
+*/
 .testimonials .item {
     background: var(--grey-2);
     border-radius: var(--border-radius-lg);
@@ -515,7 +554,11 @@ section > .heading p {
     gap: .7%;
 }
 
-/* Section - Two Column */
+/*
+* =================================================================================================
+*   Section - Two Column
+* =================================================================================================
+*/
 .two-column {
     display: flex;
     flex-direction: row;
@@ -560,7 +603,11 @@ section > .heading p {
     align-self: baseline;
 }
 
-/* Section - SEO Text */
+/*
+* =================================================================================================
+*   Section - SEO Text
+* =================================================================================================
+*/
 .seo-text__overflow {
     max-height: 10000px;
     text-align: justify;
@@ -625,11 +672,11 @@ section > .heading p {
     transition: transform .3s ease;
 }
 
-/* Footer */
-footer {
-    background: var(--grey-2);
-}
-
+/*
+* =================================================================================================
+*   Footer - Grid Layout
+* =================================================================================================
+*/
 .footer {
     display: grid;
     grid-template-columns: 200px 1fr 1fr 200px;
@@ -646,6 +693,43 @@ footer {
 
 .footer__info {
     grid-area: info;
+}
+
+.footer__lang {
+    grid-area: lang;
+}
+
+.footer__menu {
+    grid-area: menu;
+}
+
+.footer__help {
+    grid-area: help;
+}
+
+.footer__subscribe {
+    grid-area: subscribe;
+}
+
+.footer__copyright {
+    grid-area: copyright;
+}
+
+/*
+* =================================================================================================
+*   Footer
+* =================================================================================================
+*/
+footer {
+    background: var(--grey-2);
+}
+
+.footer__logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer__info {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -660,11 +744,12 @@ footer {
 }
 
 .footer__lang {
-    grid-area: lang;
+    display: flex;
+    align-items: center;
+    justify-content: end;
 }
 
 .footer__menu {
-    grid-area: menu;
 }
 
 .footer__menu ul {
@@ -678,15 +763,14 @@ footer {
     color: var(--text-color-2);
 }
 
-.footer__menu-title a {
-    font-weight: 700 !important;
-    font-size: 18px !important;
-    line-height: 150% !important;
-    color: var(--text-color-4) !important;
+.footer__menu ul li:first-child a {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    color: var(--text-color-4);
 }
 
 .footer__help {
-    grid-area: help;
 }
 
 .footer__help h3 {
@@ -704,7 +788,6 @@ footer {
 }
 
 .footer__subscribe {
-    grid-area: subscribe;
 }
 
 .footer__subscribe .form-group {
@@ -731,7 +814,6 @@ footer {
 }
 
 .footer__subscribe input[type=checkbox] {
-
 }
 
 .footer__subscribe label[for=agreed] {
@@ -739,10 +821,6 @@ footer {
     font-size: 16px;
     line-height: 125%;
     color: var(--text-color-2);
-}
-
-.footer__copyright {
-    grid-area: copyright;
 }
 
 .footer__copyright p {
@@ -753,7 +831,11 @@ footer {
     color: rgba(163, 157, 175, 0.64);
 }
 
-/* Footer Grid Borders */
+/*
+* =================================================================================================
+*   Footer - Grid Borders
+* =================================================================================================
+*/
 .footer {
     --footer-border-color: var(--grey-4);
 }
@@ -775,7 +857,11 @@ footer {
     padding-inline-start: 20px;
 }
 
-/* Language Selector */
+/*
+* =================================================================================================
+*   Language Selector
+* =================================================================================================
+*/
 .lang-selector {
     display: flex;
     align-items: center;
@@ -792,7 +878,11 @@ footer {
     font-weight: 500;
 }
 
-/* Custom Checkbox */
+/*
+* =================================================================================================
+*   Custom Checkbox
+* =================================================================================================
+*/
 .custom-checkbox {
     display: flex;
     align-items: center;
