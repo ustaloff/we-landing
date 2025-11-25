@@ -1,8 +1,11 @@
 /* Base */
 :root {
+    --header-height: 77px;
     --container-width: 1530px;
     --container-padding-x: 15px;
-    --header-height: 77px;
+    --border-radius-lg: 16px;
+    --border-radius-md: 12px;
+
 
     --accent: #4b91f3;
     --grey-4: #394760;
@@ -114,7 +117,7 @@ main .container {
 button.btn {
     padding: 12px 33px;
     background: var(--grey-3);
-    border-radius: 12px;
+    border-radius: var(--border-radius-md);
     font-weight: 700;
     font-size: 18px;
     line-height: 150%;
@@ -198,7 +201,7 @@ section > .heading p {
 .offers .item {
     background: var(--grey-2);
     border: 1px solid var(--grey-4);
-    border-radius: 16px;
+    border-radius: var(--border-radius-lg);
     overflow: hidden;
 }
 
@@ -300,7 +303,7 @@ section > .heading p {
 /* Section - Games */
 .games .item {
     background: var(--grey-2);
-    border-radius: 16px;
+    border-radius: var(--border-radius-lg);
     overflow: hidden;
 }
 
@@ -331,14 +334,14 @@ section > .heading p {
     width: 100%;
     height: auto;
     object-fit: cover;
-    border-radius: 16px;
+    border-radius: var(--border-radius-lg);
     overflow: hidden;
 }
 
 /* Section - Providers */
 .providers .item {
     background: var(--grey-2);
-    border-radius: 16px;
+    border-radius: var(--border-radius-lg);
     overflow: hidden;
 }
 
@@ -378,8 +381,8 @@ section > .heading p {
     flex-direction: column;
     justify-content: center;
     background: var(--grey-3);
-    border-end-start-radius: 16px;
-    border-end-end-radius: 16px;
+    border-end-start-radius: var(--border-radius-lg);
+    border-end-end-radius: var(--border-radius-lg);
     overflow: hidden;
 }
 
@@ -421,7 +424,7 @@ section > .heading p {
     bottom: 0;
     margin: auto;
     z-index: 0;
-    border-radius: 16px;
+    border-radius: var(--border-radius-lg);
     overflow: hidden;
 }
 
@@ -489,7 +492,7 @@ section > .heading p {
 /* Section - Testimonials */
 .testimonials .item {
     background: var(--grey-2);
-    border-radius: 16px;
+    border-radius: var(--border-radius-lg);
     overflow: hidden;
 }
 
