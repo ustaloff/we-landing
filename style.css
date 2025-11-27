@@ -230,6 +230,120 @@ section > .heading p {
 *   Section - Hero
 * =================================================================================================
 */
+.hero {
+    display: flex;
+    padding: 24px 48px;
+    background-image: url(img/hero.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: var(--border-radius-lg);
+    aspect-ratio: 1 / 0.2632;
+}
+
+.hero > * {
+    flex: 0 1 50%;
+}
+
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5%;
+}
+
+.hero__content h2 {
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 125%;
+    text-wrap: balance;
+    color: var(--text-color);
+}
+
+.hero__content p {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 125%;
+    color: var(--accent);
+}
+
+.social-invite {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 48px;
+}
+
+.social-invite__divider {
+    line-height: 130%;
+    font-weight: 400;
+    font-size: clamp(1.125rem, 1.0341rem + 0.4545cqi, 1.375rem);
+    color: var(--text-color-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-block: 20px;
+    gap: 10px;
+}
+
+.social-invite__divider::before,
+.social-invite__divider::after {
+    content: "";
+    height: 1px;
+    flex: 1 1 0%;
+    display: block;
+    background: var(--text-color-2);
+}
+
+.social-invite__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+.social-invite__buttons .btn {
+    height: 48px;
+    padding: 10px;
+    border-radius: 50%;
+    aspect-ratio: 1;
+}
+
+.social-invite__buttons .btn.btn--facebook {
+    border: 1px solid #0866ff;
+    background: rgba(8, 102, 255, 0.6);
+}
+
+.social-invite__buttons .btn.btn--facebook:hover {
+    background: rgba(8, 102, 255, 0.8)
+}
+
+.social-invite__buttons .btn.btn--whatsapp {
+    border: 1px solid #25d366;
+    background: rgba(37, 211, 102, 0.6);
+}
+
+.social-invite__buttons .btn.btn--whatsapp:hover {
+    background: rgba(37, 211, 102, 0.8);
+}
+
+.social-invite__buttons .btn.btn--telegram {
+    border: 1px solid #2aabee;
+    background: rgba(42, 171, 238, 0.6);
+}
+
+.social-invite__buttons .btn.btn--telegram:hover {
+    background: rgba(42, 171, 238, 0.8);
+}
+
+.social-invite__buttons .btn.btn--x {
+    border: 1px solid #ffffff;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.social-invite__buttons .btn.btn--x:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
 /*
 * =================================================================================================
 *   Section - Offers
@@ -581,7 +695,7 @@ section > .heading p {
 }
 
 .two-column > * {
-    flex: 1;
+    flex: 0 1 50%;
 }
 
 .two-column__content {
@@ -612,6 +726,16 @@ section > .heading p {
 
 .two-column__content button {
     align-self: baseline;
+}
+
+.two-column__image {
+    aspect-ratio: 1 / 0.575;
+}
+
+.two-column__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 /*
@@ -921,7 +1045,7 @@ footer {
 
 /*
 * =================================================================================================
-*   Language Selector
+*   Language Dropdown
 * =================================================================================================
 */
 .lang-selector {
@@ -943,11 +1067,6 @@ footer {
     color: var(--text-color-4);
 }
 
-/*
-* =================================================================================================
-*   Language Dropdown
-* =================================================================================================
-*/
 .lang-dropdown {
     width: fit-content;
     position: absolute;
@@ -965,7 +1084,9 @@ footer {
 }
 
 .lang-dropdown ul li a {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 8px;
     padding: 5px 10px;
     color: var(--white-0);
     text-decoration: none;
@@ -984,16 +1105,10 @@ footer {
     overflow: hidden;
 }
 
-.lang-dropdown ul li a {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
 .arrow {
-    position: absolute;
-    background: var(--grey-3);
     width: 8px;
     height: 8px;
+    position: absolute;
+    background: var(--grey-3);
     transform: rotate(45deg);
 }
