@@ -146,8 +146,8 @@ main .container {
 }
 
 .btn.btn-primary:hover {
-     background: linear-gradient(0deg, rgba(24, 38, 44, 0.2), rgba(24, 38, 44, 0.2)), linear-gradient(7deg, #2450bf 0%, #5777e0 100%);
- }
+    background: linear-gradient(0deg, rgba(24, 38, 44, 0.2), rgba(24, 38, 44, 0.2)), linear-gradient(7deg, #2450bf 0%, #5777e0 100%);
+}
 
 .btn.btn-secondary {
     background: linear-gradient(7deg, #ff1732 0%, #ff545b 100%);
@@ -182,6 +182,12 @@ header {
 .header__nav {
     display: flex;
     gap: 10px;
+}
+
+.header__lang {
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
 /*
@@ -747,6 +753,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: end;
+    position: relative;
 }
 
 .footer__menu {
@@ -859,27 +866,6 @@ footer {
 
 /*
 * =================================================================================================
-*   Language Selector
-* =================================================================================================
-*/
-.lang-selector {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-    padding: 8px 12px;
-    border-radius: var(--border-radius-md);
-    background-color: var(--grey-3);
-    border: 1px solid var(--grey-4);
-    width: fit-content;
-}
-
-.lang-selector span {
-    font-weight: 500;
-}
-
-/*
-* =================================================================================================
 *   Custom Checkbox
 * =================================================================================================
 */
@@ -926,4 +912,83 @@ footer {
 
 .custom-checkbox input[type="checkbox"]:checked + label .checkbox-visual svg {
     display: block;
+}
+
+/*
+* =================================================================================================
+*   Language Selector
+* =================================================================================================
+*/
+.lang-selector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: var(--grey-2);
+    border: 1px solid var(--grey-4);
+    border-radius: var(--border-radius-md);
+    width: fit-content;
+    cursor: pointer;
+}
+
+.lang-selector span {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 90%;
+    color: var(--text-color-4);
+}
+
+/*
+* =================================================================================================
+*   Language Dropdown
+* =================================================================================================
+*/
+.lang-dropdown {
+    position: absolute;
+    background-color: var(--grey-3);
+    /*border: 1px solid var(--grey-4);*/
+    border-radius: var(--border-radius-md);
+    padding: 10px;
+    width: 100%;
+    z-index: 10;
+}
+
+.lang-dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.lang-dropdown ul li a {
+    display: block;
+    padding: 5px 10px;
+    color: var(--white-0);
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.lang-dropdown ul li a:hover {
+    background-color: var(--grey-2);
+}
+
+.lang-flag {
+    width: 20px;
+    height: 20px;
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.lang-dropdown ul li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#arrow {
+    position: absolute;
+    background: var(--grey-3);
+    width: 8px;
+    height: 8px;
+    transform: rotate(45deg);
 }
