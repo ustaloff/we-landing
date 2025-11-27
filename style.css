@@ -690,7 +690,7 @@ section > .heading p {
     column-gap: 8.5%;
 }
 
-.two-column.--column-reverse {
+.two-column.--reverse {
     flex-direction: row-reverse;
 }
 
