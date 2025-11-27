@@ -21,27 +21,20 @@
             <a href="/signup" class="btn btn-primary">Sign Up</a>
             <a href="/login" class="btn">Login</a>
 
-            <div class="header__lang">
-                <div id="lang-button2" class="lang-selector">
-                    <img src="img/en.png" alt="English flag" class="lang-flag"><span>English</span>
-
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7 10L12 15L17 10H7Z" fill="var(--grey-3)" />
-                    </svg>
-
-                    <!--                <svg width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">-->
-                    <!--                    <path d="M0 0L5 5L10 0H0Z" fill="#26324A" />-->
-                    <!--                </svg>-->
+            <div id="lang-switcher-header" class="header__lang">
+                <div class="lang-selector">
+                    <img src="img/en.png" alt="English flag" class="lang-flag">
+                    <span>EN</span>
                 </div>
 
-                <div id="lang-dropdown2" class="lang-dropdown" style="display: none;">
+                <div class="lang-dropdown" style="display: none;">
                     <ul>
                         <li><a href="#"><img src="img/en.png" alt="English flag" class="lang-flag"> English</a></li>
                         <li><a href="#"><img src="img/es.png" alt="Español flag" class="lang-flag"> Español</a></li>
                         <li><a href="#"><img src="img/fr.png" alt="Français flag" class="lang-flag"> Français</a></li>
                         <li><a href="#"><img src="img/de.png" alt="Deutsch flag" class="lang-flag"> Deutsch</a></li>
                     </ul>
-                    <div id="arrow2"></div>
+                    <div class="arrow"></div>
                 </div>
             </div>
         </div>
@@ -579,27 +572,24 @@
             <p>Warning: participation in the game may result in material issues.</p>
         </div>
 
-        <div class="footer__lang">
-            <div id="lang-button" class="lang-selector">
-                <img src="img/en.png" alt="English flag" class="lang-flag"><span>English</span>
+        <div id="lang-switcher-footer" class="footer__lang">
+            <div class="lang-selector">
+                <img src="img/en.png" alt="English flag" class="lang-flag">
+                <span>English</span>
 
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7 10L12 15L17 10H7Z" fill="var(--grey-3)" />
                 </svg>
-
-<!--                <svg width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">-->
-<!--                    <path d="M0 0L5 5L10 0H0Z" fill="#26324A" />-->
-<!--                </svg>-->
             </div>
 
-            <div id="lang-dropdown" class="lang-dropdown" style="display: none;">
+            <div class="lang-dropdown" style="display: none;">
                 <ul>
                     <li><a href="#"><img src="img/en.png" alt="English flag" class="lang-flag"> English</a></li>
                     <li><a href="#"><img src="img/es.png" alt="Español flag" class="lang-flag"> Español</a></li>
                     <li><a href="#"><img src="img/fr.png" alt="Français flag" class="lang-flag"> Français</a></li>
                     <li><a href="#"><img src="img/de.png" alt="Deutsch flag" class="lang-flag"> Deutsch</a></li>
                 </ul>
-                <div id="arrow"></div>
+                <div class="arrow"></div>
             </div>
         </div>
 
@@ -682,6 +672,7 @@
         </div>
     </div>
 </footer>
+<script src="lang-switcher.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

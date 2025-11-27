@@ -187,7 +187,12 @@ header {
 .header__lang {
     display: flex;
     align-items: center;
-    position: relative;
+    /*position: relative;*/
+}
+
+.header__lang .lang-selector {
+    background: transparent;
+    border-color: transparent;
 }
 
 /*
@@ -753,7 +758,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: end;
-    position: relative;
+    /*position: relative;*/
 }
 
 .footer__menu {
@@ -944,12 +949,12 @@ footer {
 * =================================================================================================
 */
 .lang-dropdown {
+    width: fit-content;
     position: absolute;
     background-color: var(--grey-3);
     /*border: 1px solid var(--grey-4);*/
     border-radius: var(--border-radius-md);
     padding: 10px;
-    width: 100%;
     z-index: 10;
 }
 
@@ -985,7 +990,7 @@ footer {
     gap: 8px;
 }
 
-#arrow {
+.arrow {
     position: absolute;
     background: var(--grey-3);
     width: 8px;
