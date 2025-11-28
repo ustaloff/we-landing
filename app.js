@@ -8,14 +8,14 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     // Initialize various Swiper carousels across the page with specific configurations.
-    initSwiper('.offers__swiper', {
+    initSwiper('#offers-slider', {
         loop: false,
         slidesPerView: 4,
         slidesPerGroup: 1,
         spaceBetween: 32,
     });
 
-    initSwiper('.games__swiper', {
+    initSwiper('#games-slider', {
         loop: false,
         slidesPerView: 6,
         slidesPerGroup: 2,
@@ -26,21 +26,21 @@ document.addEventListener('DOMContentLoaded', function () {
         },
     });
 
-    initSwiper('.providers__swiper', {
+    initSwiper('#providers-slider', {
         loop: false,
         slidesPerView: 5,
         slidesPerGroup: 1,
         spaceBetween: 26,
     });
 
-    initSwiper('.benefits__swiper', {
+    initSwiper('#benefits-slider', {
         loop: false,
         slidesPerView: 3,
         slidesPerGroup: 1,
         spaceBetween: 40,
     });
 
-    initSwiper('.testimonials__swiper', {
+    initSwiper('#testimonials-slider', {
         loop: false,
         slidesPerView: 4,
         slidesPerGroup: 1,
